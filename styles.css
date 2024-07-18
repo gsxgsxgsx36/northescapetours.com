@@ -1,3 +1,4 @@
+@import url('additional-styles.css');
 /* Custom properties/variables  */
 :root {
     --main-white: #ffffff;
@@ -136,12 +137,13 @@
       width: 3vh;
       height: 3vh;
       position:relative;
+      animation: up-down 1s infinite;
     }
     a:hover{
       color:green;
       transition: all 0.5s ease 0s;
     }
-    .call-icon {
+    .call-icon:hover {
       color:green;
       transition: all 0.5s ease 0s;
     }
@@ -801,3 +803,4 @@ nav ul li a i {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
+
