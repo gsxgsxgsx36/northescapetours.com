@@ -3,7 +3,7 @@
     --main-white: #ffffff;
     --main-text: #FF5F1F;
     --main-gray: #303841;
-    --main-black:black;
+    --main-lightgreen:linear-gradient(to bottom, #a9d17d, #3b6a2e);
     --main-seablue:linear-gradient(to right, #283048, #859398);
     --main-green: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
     
@@ -109,7 +109,7 @@
   
   a {
     text-decoration: none;
-    color: var(--main-orange);
+    color:var(--main-white);
   }
   
   img {
@@ -137,6 +137,15 @@
       height: 3vh;
       position:relative;
     }
+    a:hover{
+      color:green;
+      transition: all 0.5s ease 0s;
+    }
+    .call-icon {
+      color:green;
+      transition: all 0.5s ease 0s;
+    }
+
     /*logo */
     /*logo ends*/
   
@@ -169,7 +178,7 @@
     float: left;
     font-size: 24px;
     text-transform: uppercase;
-    color: #002e5b;
+    color:green;
     font-weight: 600;
     padding: 20px 0px;
   }
@@ -189,7 +198,7 @@
   nav ul li:last-child { padding-right: 0px; }
   
   nav ul li a {
-    color: #002e5b;
+    color:green;
     font-size: 18px;
     padding: 25px 20px;
     display: inline-block;
@@ -197,7 +206,7 @@
   }
   
   nav ul li a:hover {
-    background-color: #002e5b;
+    background-color: green;
     color: #fde428;
     transition: all 0.5s ease 0s;
   }
@@ -209,7 +218,7 @@
   
   nav ul li a i {
     padding-right: 10px;
-    color: #002e5b;
+    color: green;
     transition: all 0.5s ease 0s;
   }
   
@@ -221,7 +230,7 @@
   .toggle-menu ul li {
     width: 100%;
     height: 3px;
-    background-color: #002e5b;
+    background-color:rgba(28, 122, 28, 0.548);
     margin-bottom: 4px;
   }
   
@@ -262,7 +271,7 @@
     position: absolute;
     right: 0px;
     top: 53px;
-    background-color: #002e5b;
+    background-color:rgba(28, 122, 28, 0.548);
     padding: 0px;
     z-index: 99;
   }
@@ -321,15 +330,15 @@
    /* services-section */
   .services-section {
     text-align: center;
-    padding: 10rem 2rem;
-    background: var(--main-white);
+    padding: 2rem 2rem;
+    background: var(--main-green);
   }
   
   .services-section-header {
     max-width: 940px;
-    margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-white);
-    color:var(--main-text);
+    margin: 0 auto 3rem auto;
+    border-bottom: 0.5rem solid green;
+    color:var(--main-white);
   }
   
   @media (max-width: 28.75em) {
@@ -347,7 +356,7 @@
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
   }
   
   @media (max-width: 30.625em) {
@@ -361,13 +370,14 @@
   }
   
   .service {
-    background: var(--main-gray);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    background: var(--main-lightgreen);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
   }
   
   .code {
-    color: var(--main-gray);
+    color: var(--main-white);
     transition: color 0.3s ease-out;
   }
   
@@ -376,35 +386,41 @@
   }
   
   .service-image {
-    height: calc(100% - 6.8rem);
-    width: 100%;
+    margin:2rem;
+    height:50%;
+    width: 80%;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
   }
-  
+
+  .service-title,li,p {
+  color: var(--main-white);
+  }
   .service-title {
     font-size: 2rem;
-    padding: 2rem 0.5rem;
+    padding: 1rem 0.5rem;
+    
   }
   /*services section ends */
 
   /*cabs section */
   .cabs-section {
     text-align: center;
-    padding: 10rem 2rem;
-    background: var(--main-white);
+    padding:5rem 2rem;
+    background: var(--main-lightgreen);
   }
   
   .cabs-section-header {
-    max-width: 640px;
-    margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-text);
+    max-width: 940px;
+    margin: 0 auto 3rem auto;
+    border-bottom: 0.5rem solid green;
   
   }
   
   @media (max-width: 28.75em) {
     .cabs-section-header {
-      font-size: 4rem;
-      
+      font-size: 4rem; 
     }
   }
   
@@ -412,10 +428,10 @@
   .cabs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 4rem;
+    grid-gap: 6rem;
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin:0 auto;
     margin-bottom: 6rem;
   }
   
@@ -431,12 +447,13 @@
   
   .cab {
     background: var(--main-gray);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
   }
   
   .code {
-    color: var(--main-orange-tomato);
+    color: var(--main-white);
     transition: color 0.3s ease-out;
   }
   
@@ -445,9 +462,12 @@
   }
   
   .cab-image {
-    height: calc(100% - 6.8rem);
-    width: 100%;
+    margin:2rem auto;
+    height:50%;
+    width: 90%;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
   }
   
   .cab-title {
@@ -462,13 +482,14 @@
   .projects-section {
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-seablue);
+    background: var(--main-white);
   }
   
   .projects-section-header {
-    max-width: 740px;
-    margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-white);
+    max-width: 940px;
+    margin: 0 auto 3rem auto;
+    border-bottom: 0.5rem solid rgb(59, 168, 59);
+     color:rgb(59, 168, 59); 
   }
   
   @media (max-width: 28.75em) {
@@ -499,9 +520,10 @@
   }
   
   .project {
-    background: var(--main-gray);
+    background: var(--main-lightgreen);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    border-radius: 10px;
+    padding: 2rem;
   }
   
   .code {
@@ -515,8 +537,11 @@
   
   .project-image {
     height: calc(100% - 6.8rem);
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
   }
   
   .project-title {
@@ -605,7 +630,7 @@
     justify-content: space-evenly;
     padding: 2rem;
     background: var(--main-gray);
-    border-top: 4px solid var(--main-red);
+    border-top: 4px solid var(--main-lightgreen);
   }
   
   footer > p {
