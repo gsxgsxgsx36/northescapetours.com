@@ -693,7 +693,7 @@
 }
 /*SLIDER SECTION STYLER ENDS */
 /* 460px / 16px = 28.75em */
-@media (max-width: 61.25em) {
+@media (max-width: 28.25em) {
   .slider { 
     position:relative;
     max-width: 100%;
@@ -720,5 +720,37 @@
 .slide img {
   width: 100vw;
   height: 50vh;   
+}
+/*navbar */
+nav {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 53px;
+  background-color: #002e5b;
+  padding: 0px;
+  z-index: 99;
+}
+
+nav ul { width: auto; }
+
+nav ul li {
+  float: none;
+  padding: 0px;
+  width: 100%;
+  display: table;
+}
+
+nav ul li a {
+  color: #FFF;
+  font-size: 25px;
+  padding: 10px 20px;
+  display: block;
+  border-bottom: 1px solid rgba(225,225,225,0.1);
+}
+
+nav ul li a i {
+  color: #fde428;
+  padding-right: 13px;
 }
 }
