@@ -4,8 +4,8 @@
     background: #08ad10;
     border: 0;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 85px;
+    height: 85px;
     display: inline-block;
     color: #fff;
     outline: 0;
@@ -18,13 +18,13 @@
 }
 .btn-sonar img {
     margin:11px auto;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     animation: rotate-img 1s infinite;
 }
 
 .btn-sonar::before {
-    content: "";
+    content: "Say hello ";
     display: inline-block;
     position: absolute;
     width: 100%;
@@ -45,4 +45,30 @@
     100% {margin-top: 10px;}
 
 
+}
+
+@media (max-width: 980px) {
+    @keyframes sonar-effect{0%{opacity:.3}40%{opacity:.5;box-shadow:0 0 0 5px #08ad10,0 0 10px 10px #00c1ef,0 0 0 10px #08ad10}100%{box-shadow:0 0 0 5px #08ad10, 0 10px 10px #08ad10,0 0 0 10px #08ad10;transform:scale(1.5);opacity:0}}
+    .btn-sonar {
+        background: #08ad10;
+        border: 0;
+        border-radius: 50%;
+        width: 95px;
+        height: 95px;
+        display: inline-block;
+        color: #fff;
+        outline: 0;
+        position: fixed;
+        text-align: center;
+        line-height: 55px;
+        left: 15px;
+        bottom: 15px;
+        z-index: 99;
+    }
+    .btn-sonar img {
+        margin:8px auto;
+        width: 80px;
+        height: 80px;
+        animation: rotate-img 1s infinite;
+    } 
 }
