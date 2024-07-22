@@ -1,4 +1,5 @@
 @import url('additional-styles.css');
+@import url('respo.css');
 /* Custom properties/variables  */
 :root {
     --main-white: #ffffff;
@@ -134,10 +135,11 @@
       width:auto
     }
      .top-bar img{
-      width: 3vh;
-      height: 3vh;
+      width: 5vh;
+      height: 5vh;
       position:relative;
       animation: up-down 1s infinite;
+      
     }
     a:hover{
       color:green;
@@ -260,7 +262,7 @@
   }
   
   label {
-    float: right;
+    float:right;
     padding: 8px 0px;
     display: inline-block;
     cursor: pointer;
@@ -334,6 +336,7 @@
     text-align: center;
     padding: 2rem 2rem;
     background: var(--main-green);
+
   }
   
   .services-section-header {
@@ -357,10 +360,44 @@
     grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin:0;
+    padding:0;
     margin-bottom: 1rem;
   }
+  .services-slider { 
+    position:relative;
+    max-width: 95%;
+    margin:10px;
+    overflow: hidden;
+    height:100%;    
+    background: var(--main-lightgreen);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+
+  }
   
+  .services-slides {
+    display: flex;
+    transition: transform 3.5s ease-in-out;
+    width: 100%;
+    height: 50%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .services-slide {
+    object-fit: cover;
+    min-width: 100%;
+    position: relative;
+    height: 100%;
+  }
+  .services-slide img {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+
   @media (max-width: 30.625em) {
     .services-section {
       padding: 6rem 1rem;
@@ -376,6 +413,7 @@
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 20px;
+    overflow: hidden;
   }
   
   .code {
@@ -383,17 +421,11 @@
     transition: color 0.3s ease-out;
   }
   
-  .service:hover .code {
+ 
+  .service-title:hover .code{
+    font-size: 2.2rem;
+    padding: 5rem 0.5rem;
     color: #ff7f50;
-  }
-  
-  .service-image {
-    margin:2rem;
-    height:50%;
-    width: 80%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
   }
 
   .service-title,li,p {
@@ -401,7 +433,7 @@
   }
   .service-title {
     font-size: 2rem;
-    padding: 1rem 0.5rem;
+    padding: 5rem 0.5rem;
     
   }
   /*services section ends */
@@ -476,7 +508,11 @@
     font-size: 2rem;
     padding: 2rem 0.5rem;
   }
-  
+  .cab-title:hover{
+    color: #ff7f50;
+    font-size: 2.2rem;
+    padding: 2rem 0.5rem;
+  }
 /*cabs-services section ends */
   
 /* Projects section */
@@ -653,7 +689,7 @@
 
 /*SLIDER SECTION STYLER */
 
-  .slider { 
+.slider { 
     position:relative;
     max-width: 100%;
     margin:0;
@@ -718,69 +754,8 @@
 .prev:hover, .next:hover {
     background-color: rgb(63, 76, 119);
 }
-/*SLIDER SECTION STYLER ENDS */
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.25em) {
-  .slider { 
-    position:relative;
-    max-width: 100%;
-    margin:0;
-    overflow: hidden;
-    height: 50vh;    
-}
 
-.slides {
-    display: flex;
-    transition: transform 0.9s ease-in-out;
-    width: 100vw;
-    height: 50vh;
-}
 
-.slide {
-  object-fit: cover;
-    min-width: 100%;
-    height: 90vh;
-    position: relative;
-    height: 50vh;
-}
-
-.slide img {
-  width: 100vw;
-  height: 50vh;   
-}
-/*navbar */
-nav {
-  display: none;
-  position: absolute;
-  right: 0px;
-  top: 53px;
-  background-color: #002e5b;
-  padding: 0px;
-  z-index: 99;
-}
-
-nav ul { width: auto; }
-
-nav ul li {
-  float: none;
-  padding: 0px;
-  width: 100%;
-  display: table;
-}
-
-nav ul li a {
-  color: #FFF;
-  font-size: 25px;
-  padding: 10px 20px;
-  display: block;
-  border-bottom: 1px solid rgba(225,225,225,0.1);
-}
-
-nav ul li a i {
-  color: #fde428;
-  padding-right: 13px;
-}
-}
 /*tour section  */
 .tour-section {
   background: linear-gradient(to bottom, #a9d17d, #3b6a2e);
@@ -802,5 +777,111 @@ nav ul li a i {
   padding: 5px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 58%;
+  }
+  .nav-section { max-width: 95%; }
+  header { padding: 20px 0px; 
+  background-color: #fde428;
+  }
+
+#logo { padding: 0px;left:0px; }
+
+input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  background: none;
+}
+input[type=checkbox]:fous {
+background:none;
+}
+
+label {
+  float:right;
+  padding: 8px 0px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked ~ nav { display: block; }
+
+nav {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 53px;
+  background-color:rgba(28, 122, 28, 0.548);
+  padding: 0px;
+  z-index: 99;
+}
+
+nav ul { width: auto; }
+
+nav ul li {
+  float: none;
+  padding: 0px;
+  width: 100%;
+  display: table;
+}
+
+nav ul li a {
+  color: #FFF;
+  font-size: 60px;
+  padding: 10px 20px;
+  display: block;
+  border-bottom: 1px solid rgba(225,225,225,0.1);
+}
+
+nav ul li a i {
+  color: #fde428;
+  padding-right: 13px;
+}
+
+.slider { 
+  position:relative;
+  max-width: 100%;
+  margin:0;
+  overflow: hidden;
+  height: 50%;    
+}
+
+.slides {
+  display: flex;
+  transition: transform 2.9s ease-in-out;
+  width: 100vw;
+  height: 50%;
+}
+
+.slide {
+  min-width: 100vw;
+  position: relative;
+  height: 50%;
+}
+
+.slide img {
+width: 100vw;
+height: 100nh;
+object-fit: cover;   
+}
+
+.text-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color:var(--main-white);
+font-size: 1.5em;
+background-color: rgba(0, 0, 0, 0.2);
+padding: 50px 0px 50px 0px ;
+border-radius: 10px;
+justify-content: center;
+text-align: center;
+width: 100%;
+height: 100%;
+}
+
 }
 
