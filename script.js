@@ -20,7 +20,7 @@ let slideIndex = 0;
     function autoSlide() {
         slideIndex++;
         showSlides();
-        setTimeout(autoSlide, 5000); // Change slide every 3 seconds
+        setTimeout(autoSlide, 4500); // Change slide every 3 seconds
     }
 
     showSlides();
@@ -35,3 +35,37 @@ let slideIndex = 0;
         ga('create', 'UA-46156385-1', 'cssscript.com');
         ga('send', 'pageview');
       
+        let slideIndex1 = 0;
+
+        function showSlides1() {
+            const slides1 = document.querySelector('.services-slides');
+            const totalservicesSlides = document.querySelectorAll('.services-slide').length;
+            if (slideIndex1 >= totalservicesSlides) {
+                slideIndex1 = 0;
+            }
+            if (slideIndex1 < 0) {
+                slideIndex1 = totalservicesSlides - 1;
+            }
+            slides1.style.transform = 'translateX(' + (-slideIndex1 * 100) + '%)';
+        }
+    
+        function moveSlides1(n) {
+            slideIndex1 += n;
+            showSlides1();
+        }
+    
+        function autoSlide1() {
+            slideIndex1++;
+            showSlides1();
+            setTimeout(autoSlide1, 4500); // Change slide every 3 seconds
+        }
+    
+        showSlides1();
+        autoSlide1();
+        /*whatsapp hyperlink 
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappIcon = document.getElementById('whatsapp-icon');
+            whatsappIcon.addEventListener('click', function() {
+              window.location.href = "https://wa.me/918054610002?text=I'm%20Your%20Travel%20Guide%20S.%20Harjit%20Singh";
+            });
+          });*/
