@@ -1,3 +1,5 @@
+
+
 let slideIndex = 0;
 
     function showSlides() {
@@ -69,3 +71,4 @@ let slideIndex = 0;
               window.location.href = "https://wa.me/918054610002?text=I'm%20Your%20Travel%20Guide%20S.%20Harjit%20Singh";
             });
           });*/
+/*this make the amritsar tour section button "book now" button to make a call */
