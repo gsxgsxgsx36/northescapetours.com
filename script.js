@@ -36,19 +36,21 @@ let slideIndex = 0;
       
         ga('create', 'UA-46156385-1', 'cssscript.com');
         ga('send', 'pageview');
-      
+   /*-----------------------------------------------
+slider for the first item of service grid 
+--------------------------------------------------*/   
         let slideIndex1 = 0;
 
         function showSlides1() {
-            const slides1 = document.querySelector('.services-slides');
-            const totalservicesSlides = document.querySelectorAll('.services-slide').length;
+            const slides1 = document.querySelector('.services-slides1');
+            const totalservicesSlides = document.querySelectorAll('.services-slide1').length;
             if (slideIndex1 >= totalservicesSlides) {
                 slideIndex1 = 0;
             }
             if (slideIndex1 < 0) {
                 slideIndex1 = totalservicesSlides - 1;
             }
-            slides1.style.transform = 'translateX(' + (-slideIndex1 * 100) + '%)';
+            slides1.style.transform = 'translateX(' + (-slideIndex1 * 110) + '%)';
         }
     
         function moveSlides1(n) {
@@ -64,6 +66,36 @@ let slideIndex = 0;
     
         showSlides1();
         autoSlide1();
+/*-----------------------------------------------
+slider for the second item of service grid 
+--------------------------------------------------*/
+        let slideIndex2 = 0;
+
+        function showSlides2() {
+            const slides2 = document.querySelector('.services-slides2');
+            const totalservicesSlides = document.querySelectorAll('.services-slide2').length;
+            if (slideIndex2 >= totalservicesSlides) {
+                slideIndex2 = 0;
+            }
+            if (slideIndex2 < 0) {
+                slideIndex2 = totalservicesSlides - 1;
+            }
+            slides2.style.transform = 'translateX(' + (-slideIndex2 * 110) + '%)';
+        }
+    
+        function moveSlides2(n) {
+            slideIndex2 += n;
+            showSlides2();
+        }
+    
+        function autoSlide2() {
+            slideIndex2++;
+            showSlides2();
+            setTimeout(autoSlide2, 4500); // Change slide every 3 seconds
+        }
+    
+        showSlides2();
+        autoSlide2();
         /*whatsapp hyperlink 
         document.addEventListener('DOMContentLoaded', function() {
             const whatsappIcon = document.getElementById('whatsapp-icon');

@@ -330,7 +330,7 @@
 /*--------------------------------------------
 media query for 1220px, 980, 580, 460, 320, 28
 ---------------------------------------------*/
-@media (max-width: 1310px) {
+@media only screen and (max-width: 1310px) {
   html {
     font-size: 58%;
   }

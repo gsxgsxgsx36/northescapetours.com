@@ -1,5 +1,4 @@
 @import url('additional-styles.css');
-@import url('respo.css');
 /* Custom properties/variables  */
 :root {
     --main-white: #ffffff;
@@ -72,6 +71,7 @@
     }
     .top-bar-box{
       font-size: 2rem;}
+  
   }
 
   @media (max-width: 18.75em) {
@@ -245,13 +245,13 @@
   .toggle-menu ul li:last-child { margin-bottom: 0px; }
   
   input[type=checkbox], label { display: none; }
-   @media only screen and (max-width: 1440px) {
-  
-  .nav-section { max-width: 95%; }
-  }
+   
    @media only screen and (max-width: 1310px) {
-  
-  header { padding: 20px 0px; }
+    html {
+      font-size: 58%;
+    }
+    .nav-section { max-width: 95%; }
+  header { padding: 20px 0px; background-color: #fde428}
   
   #logo { padding: 0px;left:0px; }
   
@@ -295,7 +295,7 @@
   
   nav ul li a {
     color: #FFF;
-    font-size: 25px;
+    font-size: 3rem;
     padding: 10px 20px;
     display: block;
     border-bottom: 1px solid rgba(225,225,225,0.1);
@@ -306,19 +306,29 @@
     padding-right: 13px;
   }
   }
-   @media only screen and (max-width: 568px) {
+   @media only screen and (max-width: 580px) {
   
   h1 { padding: 25px 0px; }
-  
   h1 span { display: block; }
+  h2 { font-size: 3.5rem; padding: 25px 0px; }
   }
+
    @media only screen and (max-width: 480px) {
+    h2 { font-size: 2rem;
+      padding: 25px 0px; }
+  .contact-section-header > h2 {
+        margin-top: 50%;
+      }
+    }
   
-  .nav-section { max-width: 90%; }
-  }
-   @media only screen and (max-width: 360px) {
-  
+  @media only screen and (max-width: 360px) {
+    .contact-section-header > h2 {
+      margin-top: 50%;
+    }
+
   h1 { font-size: 20px; }
+  h2 {font-size: 1.5rem;
+    padding: 20px 0px; }
   
   label { padding: 5px 0px; }
   
@@ -327,8 +337,12 @@
   nav { top: 47px; }
   }
    @media only screen and (max-width: 320px) {
-  
+    .contact-section-header > h2 {
+      margin-top: 50%;
+    }
+
   h1 { padding: 20px 0px; }
+  h2 { font-size: 1rem;}
   }
   
   /*welcome SLIDER SECTION STYLER */
@@ -430,7 +444,7 @@ background-color: rgb(63, 76, 119);
     grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
-    margin:0;
+    margin:10px auto ;
     padding:0;
     margin-bottom: 1rem;
   }
@@ -442,28 +456,55 @@ background-color: rgb(63, 76, 119);
     background: var(--main-lightgreen);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
     border-radius: 20px;
-
+    padding: 20px; /* Add padding to create space around the slideshow */
+    box-sizing: border-box;
   }
   
-  .services-slides {
+  .services-slides1 {
     display: flex;
     transition: width 2s ease-in-out, height 2s ease-in-out, background-color 2s ease-in-out;
     /*transition: transform 3.5s ease-in-out;*/
-    width: 100%;
+    min-width: 100%;
     height: 48%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    gap:10%;
+    border-radius: 5%;
   }
   
-  .services-slide {
-    object-fit: cover;
-    min-width: 100%;
+  .services-slide1 {
+    min-width:100%;
     position: relative;
     height: 100%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 5%;
   }
-  .services-slide img {
+  .services-slide1 img {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
+  border-radius: 5%;
+  min-width: 100%;
+  height: 100%;
+}
+
+.services-slides2 {
+  display: flex;
+  transition: width 2s ease-in-out, height 2s ease-in-out, background-color 2s ease-in-out;
+  /*transition: transform 3.5s ease-in-out;*/
+  width: 100%;
+  height: 48%;
+  gap:10%;
+}
+.services-slide2 {
+  object-fit: cover;
+  min-width: 100%;
+  position: relative;
+  height: 100%;
+  border-radius: 5%;
+}
+.services-slide2 img {
+box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+border-radius: 5%;
+min-width: 100%;
+height: 100%;
 }
 
 
@@ -700,12 +741,13 @@ background-color: rgb(63, 76, 119);
     font-size: 6rem;
   }
   
-  @media (max-width: 28.75em) {
+  @media (max-width: 710px) {
     .contact-section-header > h2 {
       font-size: 4rem;
+      margin-top: 50%;
     }
+    
   }
-  
   .contact-section-header > p {
     font-style: italic;
   }
@@ -747,21 +789,19 @@ background-color: rgb(63, 76, 119);
   footer i {
     vertical-align: middle;
   }
-  
-  @media (max-width: 28.75em) {
-    footer {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
+
 
 /*tour section  */
 .tour-section {
+  display:flex;
+  flex-direction:row;
   background: linear-gradient(to bottom, #a9d17d, #3b6a2e);
-  padding: 10px;
+  padding-left:6%;
   border-radius: 10px;
   color: white;
   width: 80vw;
+  margin: 20px auto;
+  gap: 6%;
 }
 .tour-section h3 {
   text-align: center;
@@ -769,7 +809,7 @@ background-color: rgb(63, 76, 119);
 .tour-list {
   list-style-type: none;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .tour-list li {
   margin: 5px 0;
@@ -777,68 +817,51 @@ background-color: rgb(63, 76, 119);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
+@media only screen and (max-width:680px){
+
+  .tour-section {
+    display:flex;
+    flex-direction:column;
+    background: linear-gradient(to bottom, #a9d17d, #3b6a2e);
+    border-radius: 10px;
+    color: white;
+    width: 100vw;
+    }
+  .logo-image{
+    width: 25%;
+    height: 5%;}
+  .tour-section h3 {
+    text-align: center;
+  }
+  .tour-list {
+    list-style-type: none;
+    font-size: 1rem;
+  }
+  .tour-list li {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  .address{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+ 
+  footer {
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rem;  
+  }
+  
+  footer >p{
+    margin-top: 2rem;
+  }
+}
+
+
+
 @media (max-width: 980px) {
-  html {
-    font-size: 58%;
-  }
-  .nav-section { max-width: 95%; }
-  header { padding: 20px 0px; 
-  background-color: #fde428;
-  }
-
-#logo { padding: 0px;left:0px; }
-
-input[type=checkbox] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  background: none;
-}
-input[type=checkbox]:fous {
-background:none;
-}
-
-label {
-  float:right;
-  padding: 8px 0px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-input[type=checkbox]:checked ~ nav { display: block; }
-
-nav {
-  display: none;
-  position: absolute;
-  right: 0px;
-  top: 53px;
-  background-color:rgba(28, 122, 28, 0.548);
-  padding: 0px;
-  z-index: 99;
-}
-
-nav ul { width: auto; }
-
-nav ul li {
-  float: none;
-  padding: 0px;
-  width: 100%;
-  display: table;
-}
-
-nav ul li a {
-  color: #FFF;
-  font-size: 60px;
-  padding: 10px 20px;
-  display: block;
-  border-bottom: 1px solid rgba(225,225,225,0.1);
-}
-
-nav ul li a i {
-  color: #fde428;
-  padding-right: 13px;
-}
-
 .slider { 
   position:relative;
   max-width: 100%;
