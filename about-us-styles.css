@@ -128,7 +128,7 @@
       animation: up-down 1s infinite;
       
     }
-    a:hover{
+    .top-bar-box:hover a{
       color:green;
       transition: all 0.5s ease 0s;
     }
@@ -334,7 +334,6 @@ media query for 1220px, 980, 580, 460, 320, 28
   html {
     font-size: 58%;
   }
-  .nav-section { max-width: 95%; }
   header { padding: 20px 0px; 
   background-color: #fde428;
   }
@@ -404,8 +403,7 @@ nav ul li a i {
   h2 { font-size: 2.5rem;
     padding: 25px 0px; }
   }
-  .nav-section { max-width: 90%; }
-  }
+  
 
 
 @media only screen and (max-width: 360px) {

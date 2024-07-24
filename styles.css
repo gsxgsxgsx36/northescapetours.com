@@ -145,7 +145,7 @@
       animation: up-down 1s infinite;
       
     }
-    a:hover{
+    .top-bar-box:hover a{
       color:green;
       transition: all 0.5s ease 0s;
     }
@@ -250,7 +250,6 @@
     html {
       font-size: 58%;
     }
-    .nav-section { max-width: 95%; }
   header { padding: 20px 0px; background-color: #fde428}
   
   #logo { padding: 0px;left:0px; }
@@ -327,7 +326,7 @@
     }
 
   h1 { font-size: 20px; }
-  h2 {font-size: 1.5rem;
+  h2 {font-size: 1.9rem;
     padding: 20px 0px; }
   
   label { padding: 5px 0px; }
@@ -342,7 +341,7 @@
     }
 
   h1 { padding: 20px 0px; }
-  h2 { font-size: 1rem;}
+  h2 { font-size: 1.5rem;}
   }
   
   /*welcome SLIDER SECTION STYLER */
