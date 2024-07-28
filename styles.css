@@ -49,39 +49,6 @@
    * 980px / 16px = 61.25em
   */
   
-  /* 1200px / 16px = 75em */
-  @media (max-width: 75em) {
-    html {
-      font-size: 60%;
-    }
-  }
-  
-  /* 980px / 16px = 61.25em */
-  @media (max-width: 61.25em) {
-    html {
-      font-size: 58%;
-    }
-
-  }
-  
-  /* 460px / 16px = 28.75em */
- @media (max-width: 28.75em) {
-    html {
-      font-size: 55%;
-    }
-    .top-bar-box{
-      font-size: 2rem;}
-  
-  }
-
-  @media (max-width: 18.75em) {
-    html {
-      font-size: 25%;
-    }
-    .top-bar-box{
-      font-size: 1.5rem;}
-  }
-  
   
   /* Base styles */
   
@@ -332,11 +299,7 @@ background-color: rgb(63, 76, 119);
     color:var(--main-white);
   }
   
-  @media (max-width: 28.75em) {
-    .services-section-header {
-      font-size: 4rem;
-    }
-  }
+ 
   
   /* "Automagic" image grid using no media queries */
 
@@ -809,65 +772,7 @@ height: 100%;
 
 }
 
-@media only screen and (max-width: 1310px) {
-  html {
-    font-size: 58%;
-  }
-header { padding: 20px 0px; background-color: #fde428}
 
-#logo { padding: 0px;left:0px; }
-
-input[type=checkbox] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  background: none;
-}
-input[type=checkbox]:fous {
-background:none;
-}
-
-label {
-  float:right;
-  padding: 8px 0px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-input[type=checkbox]:checked ~ nav { display: block; }
-
-nav {
-  display: none;
-  position: absolute;
-  right: 0px;
-  top: 53px;
-  background-color:rgba(28, 122, 28, 0.548);
-  padding: 0px;
-  z-index: 99;
-}
-
-nav ul { width: auto; }
-
-nav ul li {
-  float: none;
-  padding: 0px;
-  width: 100%;
-  display: table;
-}
-
-nav ul li a {
-  color: #FFF;
-  font-size: 3rem;
-  padding: 10px 20px;
-  display: block;
-  border-bottom: 1px solid rgba(225,225,225,0.1);
-}
-
-nav ul li a i {
-  color: #fde428;
-  padding-right: 13px;
-}
-}
  @media only screen and (max-width: 580px) {
 
 h1 { padding: 25px 0px; }
