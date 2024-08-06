@@ -1,0 +1,21 @@
+
+:root {
+    --topbar-bkgd-balck:#181719;
+    --mint-header: #71c9a5ff;
+    --main-navbar-text-black:#181719;
+    --hyperlink-tag-tiffany-blue:#9fd8cbff;
+    --body-text-black:#181719;
+    --topbar-text-color-mint-green:white;
+    --hovering-color-giants-orange:#fe5d26ff;
+    --nav-hover-bkgr-color-skyblue:skyblue;
+    --nav-bkgr-color-skyblue:rgba(135, 207, 235, 0.89);    
+    --nav-menu-icon-skyblue: skyblue;
+    --nav-menu-item-azzure-web: #d6e5e3ff;
+    --nav-brgrmenu-bkgr-black: #181719;
+    --slide-text-azure-web:#d6e5e3ff;
+    --section-one-bkgr-azure-web:#d6e5e3ff;
+    --section-text-tiffany-blue:skyblue;
+    --slider-bkgr-tiffany-mint:#9fd8cbff;
+    --cards-bkgr-color-skyblue:skyblue;
+    --section-mint-green: rgb(214, 240, 229);
+}
