@@ -1,48 +1,136 @@
+/* Define the keyframes for the fade-in-from-top effect */
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-120px); /* Adjust this value as needed */
+  } 
+  100% {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+  
+}
 /* I am using the em unit for breakpoints
    * The calculation is the following
    * screen size divided by browser base font size
    * As an example: a breakpoint at 980px
    * 980px / 16px = 61.25em
   */
-  
-  /* 1200px / 16px = 75em */
-  @media (max-width: 75em) {
-    html {
-      font-size: 60%;
-    }
-  }
-  /* 980px / 16px = 61.25em */
-  @media (max-width: 61.25em) {
+    /* 1200px / 16px = 75em */
+  @media only screen and (max-width: 1200px) {
+    
     html {
       font-size: 58%;
+    }
+  nav ul li a{
+    font-size: 95%;
+  }
+  .slide-text{
+    opacity: 0;
+    color: var(--slide-text-azure-web);
+    font-family: "Courgette", cursive;
+    font-style: normal;
+    font-size: 2.5em;
+    font-weight: bold; 
+    animation: fadeInTop 2.5s ease-out forwards;
+  }
+
+  .cab-image {
+    margin:2rem auto;
+    height:25vh;
+   width:25vw;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+  }
+}
+
+ 
+  /* 980px / 16px = 61.25em */
+  
+  @media only screen and (max-width: 980px) {
+    html {
+      font-size: 58%;
+    }
+  nav ul li a{
+    font-size: 75%;
+  }
+  .slide-text{
+    opacity: 0;
+    color: var(--slide-text-azure-web);
+    font-family: "Courgette", cursive;
+    font-style: normal;
+    font-size: 1.8em;
+    font-weight: bold; 
+    animation: fadeInTop 2.5s ease-out forwards;
+  }
+
+  .service {
+    background: var(--nav-brgrmenu-bkgr-azzure-web);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+  }
+  
+  .services-section {
+    padding: 1.2rem 1.2rem;
+  }
+  .service-title {
+    color:var(--body-text-black);
+    font-family: "Courgette", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 1.5rem 0.5rem;
+    
+  }
+  .cab-image {
+    margin:2rem auto;
+    height:25vh;
+    width:25vw;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+  }
+
+    .slider { 
+      position:relative;
+      max-width: 100%;
+      margin:0;
+      overflow: hidden;
+      height: 50%;    
+    }
+    
+  .slides {
+    display: flex;
+    transition: transform 2.9s ease-in-out;
+    width: 100vw;
+    height: 50%;
+  }
+  
+  .slide {
+    min-width: 100vw;
+    position: relative;
+    height: 50%;
+  }
+ 
+  .slide img {
+  width: 100vw;
+  height: 100nh;
+  }
+  
+  .text-overlay {
+  font-size: 1.5em;
+  }
+
+}
+
+@media  only screen and (max-width: 768px) {
+  .text-overlay {
+    font-size: 1.3em;
     }
 
-  }
-  /* 460px / 16px = 28.75em */
-  @media (max-width: 28.75em) {
-    html {
-      font-size: 55%;
-    }
-    .top-bar-box{
-      font-size: 2rem;}
-  }
- /* 300px / 16px = 18.75em */
-  @media (max-width: 18.75em) {
-    html {
-      font-size: 25%;
-    }
-    .top-bar-box{
-      font-size: 1.5rem;}
-  }
-  @media only screen and (max-width: 1310px) {
-    html {
-      font-size: 58%;
-    }
-    header { padding: 20px 0px; 
-    background-color: #fde428;
-    }
-  
-  #logo { padding: 0px;left:0px; }
+  #logo { padding: 1vh;left:0vh; }
   
   input[type=checkbox] {
     position: absolute;
@@ -68,7 +156,7 @@
     position: absolute;
     right: 0px;
     top: 53px;
-    background-color:rgba(28, 122, 28, 0.548);
+    background-color:var(--nav-bkgr-color-skyblue);
     padding: 0px;
     z-index: 99;
   }
@@ -83,74 +171,277 @@
   }
   
   nav ul li a {
-    color: #FFF;
-    font-size: 3rem;
+    color:var(--nav-menu-item-azzure-web);
+    font-size: 2rem;
     padding: 10px 20px;
     display: block;
     border-bottom: 1px solid rgba(225,225,225,0.1);
   }
   
   nav ul li a i {
-    color: #fde428;
+    font-family: "Courgette", cursive;
+    font-weight: bold;
+    font-style: normal;
+    color:var(--nav-menu-icon-skyblue);
     padding-right: 13px;
   }
+  .services-section-header {
+    font-size: 3.5rem; 
   }
-  
-  
-  @media only screen and (max-width: 580px) {
-    
-    h2 { font-size: 3.5rem;
-      padding: 25px 0px; }
-    }
-  
-  @media only screen and (max-width: 480px) {
-    h2 { font-size: 2.5rem;
-      padding: 25px 0px; }
-    }
-    
-    @media only screen and (max-width: 380px) {
-      .top-bar-box a{
-          font-size: 1.4rem;
-      }
-    
-      h2 {font-size: 1.9rem;
-        padding: 20px 0px; }
-      
-      label { padding: 5px 0px; }
-      
-      #logo { font-size: 20px; }
-      
-      nav { top: 47px; }
-      }
-  
-  @media only screen and (max-width: 360px) {
-    
-    h2 {font-size: 1.8rem;
-      padding: 20px 0px; }
-    
-    label { padding: 5px 0px; }
-    
-    #logo { font-size: 20px; }
-    
-    nav { top: 47px; }
-    }
-  
-  @media only screen and (max-width: 320px) {
-    .top-bar-box a{
-      font-size: 1.4rem;
+  .cab-image {
+    margin:1rem auto;
+    height:20vh;
+    width:35vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   }
-    h2 { font-size: 1.5rem;
-      padding: 20px 0px; }
+  .contact-section-header > h2 {
+    font-size: 4rem;
+    margin-top: 50%;
+  }
+.contact-section-header > p {
+    font-style: italic;
+  }
+  /*tour section */
+  .tour-section {
+    display:flex;
+    flex-direction:column;
+  }
+.content{
+    display:flex;
+    flex-direction:row;
+}
+.description{
+  margin: 5vh;
+}
+.logo-image img{
+   width:30vw;
+  height:30vh ;
+}
+}
+  @media only screen and (max-width:680px){
+    .text-overlay {
+      font-size: 1em;
+      }
+      .services-section-header {
+        font-size: 2.8rem;
+        margin: 0 auto 1rem auto;
+      }
+      .projects-section-header {
+        font-size: 3.5rem;
+        margin: 0 auto 1rem auto;
+      }
+      .content{
+        display:flex;
+        flex-direction:row;
     }
-  
-  
-  @media (max-width: 28.75em) {
-    footer {
-      flex-direction: column;
+    .description{
+      margin: 5vh;
+    }
+    .logo-image img{
+       width:30vw;
+      height:30vh ;
+    }
+    .tour-section h3 {
       text-align: center;
     }
-    .services-section-header {
-      font-size: 4rem;
+    .tour-list {
+      font-size: 1rem;
+    }
+    .tour-list li {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+   
+    footer {
+      font-weight: 100;
+      display: flex;
+      flex-direction: column;
+      margin-top: 40vh;  
+    }
+    
+    footer >p{
+      margin-top: 2rem;
     }
   }
+
+
+  @media only screen and (max-width: 580px) {
   
+    .text-overlay {
+      font-size: 0.7em;
+      }
+      .services-section-header {
+        font-size: 2.1rem;
+        margin: 0 auto 1rem auto;
+          }
+      .services-section {
+        padding: 1rem 1rem;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .cabs-section {
+        padding: 1rem 1rem;
+      }
+      .cabs-grid {
+        grid-template-columns: 1fr;
+      }
+      .cabs-section-header {
+        font-size: 2.1rem;
+        margin: 0 auto 1rem auto;
+      }
+      .cab-image {
+        margin:1rem auto;
+        height:25vh;
+        width:60vw;
+      }  
+       .projects-section {
+          padding: 1rem 1rem;
+        }
+       .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      .projects-section-header {
+        font-size: 2.1rem;
+        margin: 0 auto 1rem auto;
+      }
+      .content{
+        display:flex;
+        flex-direction:row;
+    }
+    .address, .description{
+      font-size: 1.5rem;
+  }
+    .logo-image img{
+       width:20vw;
+      height:20vh ;
+    }
+    .tour-section h3 {
+      text-align: center;
+    }
+    .tour-list {
+      font-size: 1rem;
+    }
+    .tour-list li {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+   
+    footer {
+      font-weight: 100;
+      display: flex;
+      flex-direction: column;
+      margin-top: 40vh;  
+    }
+    
+    footer >p{
+      margin-top: 1rem;
+    }
+  
+  }
+
+  /* 460px / 16px = 28.75em */
+   
+  @media only screen and (max-width: 360px) {
+    .top-bar{
+      font-size: 1.5rem;
+    }
+    .text-overlay {
+      font-size: 0.4em;
+      }
+      .services-section-header {
+        font-size: 1.1rem;
+          }
+      .services-section {
+        padding: 0.9rem;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .service {
+        padding:1vh;
+      }
+      .service-title {
+        font-size: 0.5rem;
+        padding: 0.1rem 1rem;
+      }
+      .service-title,li,p {
+        font-size: 1rem;
+        }
+      .cabs-section {
+        padding: 0.9rem;
+      }
+      .cabs-grid {
+        grid-template-columns: 1fr;
+        grid-gap:2rem;
+      }
+      .cabs-section-header {
+        font-size: 1.4rem;
+        margin: 0 auto 1rem auto;
+      }
+      .cab-image {
+        margin:0.5rem auto;
+        height:25vh;
+        width:75vw;
+      }  
+       .projects-section {
+        padding: 0.9rem;
+        margin-bottom: 5vh;
+        }
+       .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      .projects-section-header {
+        font-size: 1.4rem;
+      }
+      .project-title {
+        font-size: 1.2rem; 
+        padding: 3rem 1rem;
+      }
+      .project-image {
+        height: calc(100% - 6.8rem);
+        width: 95%;
+        margin: 0 auto; 
+      }
+      .contact-section-header > h2 {
+        font-size: 2.4rem;
+      }
+      .content{
+        display:flex;
+        flex-direction:row;
+    }
+  .description{
+      font-size: 0.5rem;
+      margin: 0;
+  }
+    .logo-image img{
+       width:20vw;
+      height:10vh ;
+    }
+    .tour-section h3 {
+      text-align: center;
+    }
+    .tour-list {
+      font-size: 0.5rem;
+      font-weight:bold;
+    }
+    .tour-list li {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      margin: 1vh;
+      padding: 0;
+    }
+   
+    footer {
+      font-weight: 100;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20vh;  
+    }
+    
+    footer >p{
+      margin-top: 1rem;
+    }
+  
+  }
